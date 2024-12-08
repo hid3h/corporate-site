@@ -25,4 +25,4 @@ jobs:
         with:
           firebaseServiceAccount: ${{ env.SERVICE_ACCOUNT_KEY }}
           channelId: live
-          projectId: fir-hosting-example-1fd34
+          projectId: project-1-443500
