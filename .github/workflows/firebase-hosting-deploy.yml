@@ -18,6 +18,7 @@ jobs:
           service_account: ${{ secrets.SERVICE_ACCOUNT }}
           create_credentials_file: true
           export_environment_variables: true
+        id: auth
       - run: |
           echo "SERVICE_ACCOUNT_KEY=$(cat "${{ steps.auth.outputs.credentials_file_path }}" | tr -d '\n')" >> $GITHUB_ENV
       - uses: FirebaseExtended/action-hosting-deploy@v0
