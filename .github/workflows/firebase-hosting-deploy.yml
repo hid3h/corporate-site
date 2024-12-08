@@ -11,6 +11,10 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
       - name: "Authenticate to Google Cloud"
         uses: "google-github-actions/auth@v1"
         with:
